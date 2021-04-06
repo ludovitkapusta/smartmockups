@@ -15,3 +15,23 @@ To create production build, run:
 ```js
 yarn build
 ```
+
+To run eslint check:
+```js
+yarn lint
+```
+
+To run eslint autofix:
+```js
+yarn lint:fix
+```
+
+To run test:
+```js
+yarn test
+```
+
+To run stylelint:
+```js
+yarn lint:styles
+```
