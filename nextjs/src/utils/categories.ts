@@ -13,7 +13,7 @@ export const getCategoryChildren = (arr: Category): Category[] =>
     return child ? [...acc, curr, ...child] : [...acc, curr]
   }, [])
 
-export const filterCategories = (
+export const filterCategoriesByMockupCategories = (
   allCategories: Category[],
   mockupCategories: string[]
 ): Category[] =>
@@ -49,7 +49,10 @@ export const getFilteredCategories = (
 ): MenuItem[] => {
   const mockupCategories = getMockupsCategories(mockups)
   const allCategories = getFlattenCategories(categories)
-  const filteredCategories = filterCategories(allCategories, mockupCategories)
+  const filteredCategories = filterCategoriesByMockupCategories(
+    allCategories,
+    mockupCategories
+  )
 
   return removeDuplicates(filteredCategories)
 }
