@@ -28,11 +28,11 @@ export const filterCategoriesByMockupCategories = (
 export const removeDuplicates = (filteredCategories: Category[]): MenuItem[] =>
   filteredCategories.reduce((acc: MenuItem[], curr) => {
     const testTitle = (item: MenuItem): boolean => item.title === curr.title
-    const c = acc.find(testTitle)
+    const item = acc.find(testTitle)
     const index = acc.findIndex(testTitle)
 
-    if (c && index >= 0) {
-      acc[index] = { ...c, slugs: [...c.slugs, curr.slug] }
+    if (item && index >= 0) {
+      acc[index] = { ...item, slugs: [...item.slugs, curr.slug] }
       return acc
     }
 
