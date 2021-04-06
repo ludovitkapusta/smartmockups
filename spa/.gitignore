@@ -1,0 +1,9 @@
+# npm
+/node_modules/
+
+# assets
+/assets
+
+# NPM package-lock, use Yarn
+/package-lock.json
+/.env
